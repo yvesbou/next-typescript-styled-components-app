@@ -7,7 +7,7 @@ interface ImageStyling {
   }
 
 export const CardContainer = styled.div`
-    max-width: 90%;
+    width: 90%;
     margin: 1rem auto;
     display: grid;
     grid-auto-flow: column;
@@ -22,17 +22,17 @@ export const CardContainer = styled.div`
 
 export const ImageContainer = styled.div<ImageStyling>`
     background-color: ${(props) => (props.hasColorOverlay ? props.theme.colors.accent : "transparent")};
-    flex: 1;
-    height: 100%;
+    position: relative;
     border-radius: 0.5rem 0rem 0rem 0.5rem;
     @media (max-width: ${(props) => props.theme.screenWidth.tablet}) {
         border-radius: 0.5rem 0.5rem 0rem 0rem;
+        height: 446px;
     }
 `
 
 export const StyledImage = styled(Image)`
     border-radius: 0.5rem 0rem 0rem 0.5rem;
-    height: 100%;
+    // height: 100%;
     // width: 100%;
     // position: relative;
     filter: brightness(0.8) opacity(0.4) contrast(1.5);

@@ -27,7 +27,7 @@ export function Card (props: IAppProps) {
                     <StyledImage
                         alt='ah'
                         src={profile}
-                        layout='intrinsic'
+                        layout='fill'
                         style={{objectFit: 'cover'}}
                         // fill
                     />
