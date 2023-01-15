@@ -39,7 +39,7 @@ export function Card (props: IAppProps) {
                         
                         {Object.keys(data).map((key: string) => {
                             return (
-                                <Stat>
+                                <Stat key={key}>
                                     <StatNumber>{data[key].stats}</StatNumber>
                                     <StatDescription>{data[key].description.toUpperCase()}</StatDescription>
                                 </Stat>
